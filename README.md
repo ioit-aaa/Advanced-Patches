@@ -2,6 +2,8 @@
 
 [![last commit](https://img.shields.io/github/last-commit/ioit-aaa/Advanced-Patches)](https://github.com/ioit-aaa/Advanced-Patches/commits/main/)
 
+[简体中文](/README_CN.md) | **English**
+
 🛠️ Advanced Patches is dedicated to making all kinds of open source projects better.
 
 > [!IMPORTANT]
