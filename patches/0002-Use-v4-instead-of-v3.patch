@@ -1,0 +1,48 @@
+From 556c18c325ac087c41455d2b5628c523099faa13 Mon Sep 17 00:00:00 2001
+From: ioit-aaa <211367176+ioit-aaa@users.noreply.github.com>
+Date: Mon, 16 Jun 2025 18:43:26 +0800
+Subject: [PATCH 2/2] Use v4 instead of v3
+
+---
+ .github/workflows/build-debug.yml | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+diff --git a/.github/workflows/build-debug.yml b/.github/workflows/build-debug.yml
+index 1a2d37d..b03d51d 100644
+--- a/.github/workflows/build-debug.yml
++++ b/.github/workflows/build-debug.yml
+@@ -8,18 +8,18 @@ jobs:
+     runs-on: ubuntu-latest
+ 
+     steps:
+-    - uses: actions/checkout@v4
++      - uses: actions/checkout@v4
+ 
+-    - uses: actions/setup-java@v4
+-      with:
+-        distribution: 'temurin'
+-        java-version: '17'
++      - uses: actions/setup-java@v4
++        with:
++          distribution: 'temurin'
++          java-version: '17'
+ 
+-    - run: chmod +x ./gradlew
++      - run: chmod +x ./gradlew
+ 
+-    - run: ./gradlew assembleDebug
++      - run: ./gradlew assembleDebug
+ 
+-    - uses: actions/upload-artifact@v3
+-      with:
+-        name: debug-apk
+-        path: app/build/outputs/apk/debug/*.apk
+\ No newline at end of file
++      - uses: actions/upload-artifact@v4
++        with:
++          name: debug-apk
++          path: app/build/outputs/apk/debug/*.apk
+\ No newline at end of file
+-- 
+2.49.0
+
